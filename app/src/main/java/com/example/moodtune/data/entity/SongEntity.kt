@@ -1,0 +1,15 @@
+package com.example.moodtune.data.entity
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "songs")
+data class SongEntity(
+    @PrimaryKey(autoGenerate = true)
+    val id: Int = 0,
+    val title: String,
+    val artist: String,
+    val cover: String = "",
+    val moodType: String,
+    val isFavorite: Boolean = false
+)
